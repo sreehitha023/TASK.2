@@ -88,7 +88,7 @@ public class UserController {
     }
 
     @GetMapping("/search")
-    public List<User> searchUsers(@PathVariable String keyword)
+    public List<User> searchUsers(@RequestParam String keyword)
     {
         return userService.searchUsers(keyword);
     }

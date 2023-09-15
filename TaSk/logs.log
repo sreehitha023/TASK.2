@@ -626,3 +626,9 @@ io.jsonwebtoken.security.WeakKeyException: The signing key's size is 64 bits whi
 2023-09-15 12:08:58.907 [http-nio-8080-exec-6] INFO  c.m.T.c.UserController - Fetched
 2023-09-15 12:09:54.922 [http-nio-8080-exec-5] INFO  c.m.T.c.UserController - DONE
 2023-09-15 12:10:10.237 [http-nio-8080-exec-7] INFO  c.m.T.c.UserController - Fetched
+2023-09-15 14:02:42.651 [HikariPool-1 housekeeper] WARN  c.z.h.p.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m52s545ms975µs800ns).
+2023-09-15 14:05:48.680 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'keyword' for method parameter type String is not present]
+2023-09-15 14:05:52.102 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'keyword' for method parameter type String is not present]
+2023-09-15 14:07:04.447 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15 14:07:04.449 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-15 14:07:04.454 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -15,3 +15,17 @@
     </root>
 
 </configuration>
+<!--        <?xml version="1.0" encoding="UTF-8"?>-->
+<!--<configuration>-->
+<!--&lt;!&ndash; Appender - Console &ndash;&gt;-->
+<!--<appender name="console" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--    <encoder>-->
+<!--        <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--    </encoder>-->
+<!--</appender>-->
+
+<!--&lt;!&ndash; Loggers &ndash;&gt;-->
+<!--<root level="info">-->
+<!--    <appender-ref ref="console"/>-->
+<!--</root>-->
+<!--</configuration>-->
