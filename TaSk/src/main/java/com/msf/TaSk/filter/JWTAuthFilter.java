@@ -1,6 +1,6 @@
 package com.msf.TaSk.filter;
 
-import com.msf.TaSk.service.UserService;
+import com.msf.TaSk.service.impl.UserServiceImpl;
 import com.msf.TaSk.utility.JWTAuthUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -23,7 +23,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
     private JWTAuthUtility jwtAuthUtility;
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userServiceImpl;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -39,7 +39,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
             }
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-                UserDetails userDetails = userService.loadUserByUsername(username);
+                UserDetails userDetails = userServiceImpl.loadUserByUsername(username);
 
                 if (jwtAuthUtility.validateToken(token, userDetails)) {
                     UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(

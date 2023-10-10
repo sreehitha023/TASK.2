@@ -1,7 +1,7 @@
 package com.msf.TaSk.config;
 
 import com.msf.TaSk.filter.JWTAuthFilter;
-import com.msf.TaSk.service.UserService;
+import com.msf.TaSk.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,19 +13,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import javax.servlet.Filter;
-
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userServiceImpl;
     @Autowired
     JWTAuthFilter jwtAuthFilter;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService);
+        auth.userDetailsService(userServiceImpl);
     }
 
     @Override
@@ -48,5 +46,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     }
+
 
 }

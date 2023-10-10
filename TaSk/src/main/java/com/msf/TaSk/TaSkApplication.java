@@ -14,8 +14,8 @@ public class TaSkApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TaSkApplication.class, args);
 	}
-@Bean
-	public PasswordEncoder passwordEncoder()
-{
-		return NoOpPasswordEncoder.getInstance();}
+//@Bean
+//	public PasswordEncoder passwordEncoder()
+//{
+//		return NoOpPasswordEncoder.getInstance();}
 }
